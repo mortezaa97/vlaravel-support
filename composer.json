@@ -1,0 +1,53 @@
+{
+    "name": "mortezaa97/support",
+    "description": "A fully-featured support ticket management system built for Laravel applications.",
+    "keywords": [
+        "mortezaa97",
+        "support"
+    ],
+    "homepage": "https://github.com/mortezaa97/support",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "morteza jafari76",
+            "email": "mortezajafari76@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mortezaa97\\Support\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mortezaa97\\Support\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mortezaa97\\Support\\SupportServiceProvider"
+            ],
+            "aliases": {
+                "Support": "Mortezaa97\\Support\\SupportFacade"
+            }
+        }
+    }
+}
