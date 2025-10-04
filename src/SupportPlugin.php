@@ -6,7 +6,6 @@ namespace Mortezaa97\Support;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Mortezaa97\Reviews\Filament;
 use Mortezaa97\Support\Filament\Resources\Departments\DepartmentResource;
 use Mortezaa97\Support\Filament\Resources\Tickets\TicketResource;
 

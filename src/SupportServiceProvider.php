@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Mortezaa97\Support;
 
 use Illuminate\Support\Facades\Gate;
@@ -42,7 +44,7 @@ class SupportServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'support');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'support');
 
         // Register the main class to use with the facade
         $this->app->singleton('support', function () {

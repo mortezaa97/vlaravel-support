@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Mortezaa97\Support\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -42,7 +45,7 @@ class TicketController extends Controller
             $ticket = $item->create($data);
             $ticket->setStatus('در انتظار بررسی');
             DB::commit();
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             return response()->json(['message' => $exception->getMessage(), 'data' => []], 419);
         }
 
@@ -78,7 +81,7 @@ class TicketController extends Controller
                 'message' => 'با موفقیت انجام شد.',
                 'ticket' => new TicketResource($ticket),
             ]);
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             return response()->json(['message' => $exception->getMessage(), 'data' => []], 419);
         }
     }
