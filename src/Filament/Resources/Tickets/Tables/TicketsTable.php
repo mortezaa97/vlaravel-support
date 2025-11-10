@@ -32,7 +32,7 @@ class TicketsTable
                 TrashedFilter::make(),
             ])
             ->recordActions([
-                EditAction::make(),
+                EditAction::make()->iconButton()->tooltip('ویرایش'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([
